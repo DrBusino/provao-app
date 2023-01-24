@@ -1,6 +1,16 @@
+import { DisneyService } from "../services/DisneyService";
+
+
+ 
 export const charList = [
-  {
-    name: "char1",
-    img: "https://static.wikia.nocookie.net/disney/images/6/61/Olu_main.png",
-  },
+
 ];
+
+
+const getLista = async () => {
+  const response = await DisneyService.getLista();
+  charList.push(response)
+};
+
+getLista()
+
